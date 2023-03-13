@@ -112,7 +112,7 @@ const Landing = () => {
         </div>
         <img src={main} alt='job hunt' className='img main-img' />
       </div>
-    </main>
+    </main> 
   );
 };
 
