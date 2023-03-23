@@ -10,6 +10,7 @@ import {
   loginUserThunk,
   registerUserThunk,
   updateUserThunk,
+  clearStoreThunk
 } from "./user/userThunk";
 
 const initialState = {
@@ -38,6 +39,9 @@ export const updateUser = createAsyncThunk(
     return updateUserThunk("/auth/updateUser", user, thunkAPI);
   }
 );
+
+export const clearStore = createAsyncThunk('user/clearStore',clearStoreThunk)
+
 const userSlice = createSlice({
   name: "user",
   initialState,
@@ -97,6 +101,9 @@ const userSlice = createSlice({
       state.isLoading = false;
       toast.error(payload);
     },
+    [clearStore.rejected] : ()=>{
+      toast.error('There was an error...')
+    }
   },
 });
 
