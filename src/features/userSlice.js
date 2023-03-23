@@ -58,6 +58,7 @@ const userSlice = createSlice({
       }
     },
   },
+  
   extraReducers: {
     [registerUser.pending]: (state) => {
       state.isLoading = true;
