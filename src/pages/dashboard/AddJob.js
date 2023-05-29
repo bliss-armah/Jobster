@@ -119,7 +119,7 @@ const AddJob = () => {
               onClick={handleSubmit}
               disabled={isLoading}
             >
-              submit
+              Add Job
             </button>
           </div>
         </div>
